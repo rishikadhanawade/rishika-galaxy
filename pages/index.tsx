@@ -34,7 +34,7 @@ export default function Home() {
             <About/>
             <Experience/>
             <Projects/>
-            <Archive/>
+            {/* <Archive/> */}
             <Contact/>
             <Footer/>
             {/* Archive */}
