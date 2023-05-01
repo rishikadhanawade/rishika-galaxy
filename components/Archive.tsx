@@ -31,8 +31,8 @@ const Archive = () => {
           link=""
         />
         <ArchiveCard
-          title="Mobile Recharge Application"
-          des="I developed a mobile recharge website with complete end-to-end flow using ASP.NET MVC, HTML, CSS, jQuery, and MySQL, allowing users to select operators, regions, and plans, and displaying an order summary based on retrieved details from the database."
+          title="Recharge Application"
+          des="Developed a mobile recharge website with complete end-to-end flow using ASP.NET MVC, HTML, CSS, jQuery, and MySQL, allowing users to select operators, regions, and plans based on retrieved details from the database."
           listItem={["ASP.Net MVC", "MySQL"]}
           link=""
         />
@@ -44,9 +44,9 @@ const Archive = () => {
               transition={{ delay: 0.1 }}
             >
               <ArchiveCard
-                title="Coming Soon"
-                des="Coming Soon"
-                listItem={["Coming Soon", "Coming Soon", "Coming Soon"]}
+                title="MerchandiseSupport Enhancement"
+                des="I fixed bugs, added tables for YouTube links and product images, and used SQL and database knowledge for a website merchandise project."
+                listItem={["Web API", "WCF", "MySQL"]}
                 link=""
               />
             </motion.div>

@@ -75,7 +75,7 @@ const Projects = () => {
             <p className="font-titleFont text-textGreen text-sm tracking-wide">
               Featured Project{" "}
             </p>
-            <h3 className="text-2xl font-bold">GaitGuard: Utilizing Gait Biometrics for Enhanced Surveillance Applications.</h3>
+            <h3 className="text-2xl font-bold">GaitGuard: Using Gait Biometrics for Enhanced Surveillance Applications.</h3>
             <p className="bg-[#112240] text-sm md:text-base p-2 md:p-6 rounded-md">
             Our project implemented Local-Bottom Network (LB) using <span className="text-textGreen">Pytorch</span> and trained it with <span className="text-textGreen">CASIA-B</span> dataset silhoutte data using <span className="text-textGreen">Adam Optimization technique.</span>
             </p>
