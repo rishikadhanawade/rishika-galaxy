@@ -1,23 +1,24 @@
 import SectionTitle from "./SectionTitle";
+import LNRS from "./works/LNRS";
 import LoyltyRewardz from "./works/LoyltyRewardz";
 import Bartleby from "./works/Bartleby";
 import { useState } from "react";
 
+type WorkType = "LNRS" | "LoyltyRewardz" | "Bartleby";
+
 const Experience = () => {
-    const[workLoyltyRewardz, setWorkLoyltyRewardz] = useState(true);
-    const[workBartleby, setWorkBartleby] = useState(false);
+  const initialWorkState: Record<WorkType, boolean> = {
+    LNRS: true,
+    LoyltyRewardz: false,
+    Bartleby: false,
+  };
 
-    const handleLoyltyRewardz = () =>{
+  const [workState, setWorkState] = useState(initialWorkState);
 
-        setWorkLoyltyRewardz(true);
-        setWorkBartleby(false);
-    };
-
-    const handleBartleby = () =>{
-
-        setWorkLoyltyRewardz(false);
-        setWorkBartleby(true);
-    };
+  const handleWork = (work: WorkType) => {
+    const updatedWorkState = { LNRS: false, LoyltyRewardz: false, Bartleby: false, [work]: true };
+    setWorkState(updatedWorkState);
+  };
 
   return (
     <section
@@ -27,24 +28,23 @@ const Experience = () => {
       <SectionTitle title="Experience" titleNo="02" />
       <div className="w-full mt-10 flex flex-col md:flex-row gap-16">
         <ul className="md:w-32 flex flex-col">
-            <li onClick={handleLoyltyRewardz} 
-            className={`${
-              workLoyltyRewardz
-              ? "border-l-textGreen text-textGreen" 
-              : "border-l-textDark text-textDark" } 
-              border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium `}>
-            Loylty Rewardz
+          {Object.keys(workState).map((work) => (
+            <li
+              key={work}
+              onClick={() => handleWork(work as WorkType)}
+              className={`${
+                workState[work as WorkType]
+                  ? "border-l-textGreen text-textGreen"
+                  : "border-l-textDark text-textDark"
+              } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm cursor-pointer duration-300 px-8 font-medium`}
+            >
+              {work}
             </li>
-            <li onClick={handleBartleby} className={`${
-              workBartleby
-              ? "border-l-textGreen text-textGreen" 
-              : "border-l-textDark text-textDark" } 
-              border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium `}>
-            Bartleby
-            </li>
+          ))}
         </ul>
-        {workLoyltyRewardz&& <LoyltyRewardz/>}
-        {workBartleby && <Bartleby/>}
+        {workState.LoyltyRewardz && <LoyltyRewardz />}
+        {workState.Bartleby && <Bartleby />}
+        {workState.LNRS && <LNRS />}
       </div>
     </section>
   );
