@@ -27,12 +27,8 @@ const About = () => {
             development technologies such as HTML, CSS, and JavaScript.
           </p>
           <p>
-            Currently, I work as a junior software developer at{" "}
-            <span className="text-textGreen">Loylty Rewardz</span>, where I am
-            responsible for developing and implementing software solutions that
-            meet the needs of clients. I work closely with senior developers to
-            design and implement high-quality, efficient code that delivers
-            outstanding results.
+          Currently, I work as a Software Engineer II at <a href="https://risk.lexisnexis.com/" target="_blank" className="text-textGreen">LexisNexis Risk Solutions</a>, where I am responsible for developing and implementing software solutions that meet the needs of clients. I work closely with senior developers to design and implement high-quality, efficient code that delivers outstanding results.
+
           </p>
           <p>
             I have a strong desire to continuously improve my skills and

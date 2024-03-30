@@ -33,7 +33,7 @@ const Banner = () => {
       >
         I am a software developer with expertise in ASP.NET, C#, and MySQL, and
         a fundamental understanding of HTML, CSS, and JavaScript. Currently, I
-        am a software developer at Loylty Rewardz, developing software solutions
+        am a software developer at LexisNexis Risk Solutions, developing software solutions
         for clients. My problem-solving abilities and attention to detail are my
         greatest strengths.{" "}
         <a href="" target="_blank">
